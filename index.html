@@ -1,0 +1,504 @@
+```html id="w24591"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sabitha Sankar | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#0b0b1f;
+  color:white;
+  overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+  width:100%;
+  padding:20px 10%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:fixed;
+  top:0;
+  background:rgba(0,0,0,0.35);
+  backdrop-filter:blur(12px);
+  z-index:1000;
+}
+
+nav h1{
+  color:#c084fc;
+  font-size:32px;
+  font-weight:700;
+}
+
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:30px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:white;
+  transition:0.3s;
+  font-weight:500;
+}
+
+nav ul li a:hover{
+  color:#c084fc;
+}
+
+/* HERO SECTION */
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:80px;
+  padding:120px 10%;
+  flex-wrap:wrap;
+}
+
+.hero-text{
+  flex:1;
+  min-width:300px;
+}
+
+.hero-text h3{
+  color:#d8b4fe;
+  font-size:28px;
+}
+
+.hero-text h1{
+  font-size:75px;
+  line-height:1.1;
+  margin-top:10px;
+}
+
+.hero-text span{
+  color:#c084fc;
+}
+
+.hero-text p{
+  margin-top:25px;
+  color:#d1d5db;
+  line-height:1.9;
+  max-width:600px;
+  font-size:17px;
+}
+
+.buttons{
+  margin-top:35px;
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:14px 35px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.btn-primary{
+  background:#7c3aed;
+  color:white;
+}
+
+.btn-primary:hover{
+  transform:translateY(-5px);
+  box-shadow:0 10px 25px rgba(124,58,237,0.5);
+}
+
+.btn-outline{
+  border:2px solid #7c3aed;
+  color:#d8b4fe;
+}
+
+.btn-outline:hover{
+  background:#7c3aed;
+  color:white;
+}
+
+/* HERO IMAGE */
+
+.hero-image{
+  flex:1;
+  display:flex;
+  justify-content:center;
+  min-width:300px;
+}
+
+.hero-image img{
+  width:340px;
+  height:340px;
+  border-radius:20px;
+  object-fit:cover;
+  border:5px solid #a855f7;
+  box-shadow:0 0 40px rgba(168,85,247,0.4);
+}
+
+/* GENERAL SECTION */
+
+section{
+  padding:100px 10%;
+}
+
+.title{
+  text-align:center;
+  font-size:45px;
+  margin-bottom:60px;
+  color:#d8b4fe;
+}
+
+.glass{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:20px;
+  padding:40px;
+  backdrop-filter:blur(10px);
+}
+
+/* ABOUT */
+
+.about p{
+  color:#d1d5db;
+  line-height:2;
+  font-size:17px;
+  text-align:center;
+}
+
+/* SKILLS */
+
+.skills{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+
+.skill-card{
+  text-align:center;
+  transition:0.3s;
+}
+
+.skill-card:hover{
+  transform:translateY(-8px);
+  border:1px solid #a855f7;
+}
+
+.skill-card h3{
+  color:#f3e8ff;
+  font-size:20px;
+}
+
+/* PROJECTS */
+
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:30px;
+}
+
+.project-card{
+  transition:0.3s;
+}
+
+.project-card:hover{
+  transform:translateY(-10px);
+}
+
+.project-card h3{
+  color:#d8b4fe;
+  margin-bottom:15px;
+  font-size:24px;
+}
+
+.project-card p{
+  color:#d1d5db;
+  line-height:1.9;
+}
+
+.project-btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 24px;
+  background:#7c3aed;
+  color:white;
+  text-decoration:none;
+  border-radius:10px;
+  transition:0.3s;
+}
+
+.project-btn:hover{
+  background:#9333ea;
+}
+
+/* CONTACT */
+
+.contact{
+  text-align:center;
+}
+
+.contact p{
+  margin-top:15px;
+  color:#d1d5db;
+  font-size:17px;
+}
+
+/* FOOTER */
+
+footer{
+  text-align:center;
+  padding:30px;
+  color:#94a3b8;
+  border-top:1px solid rgba(255,255,255,0.1);
+  font-size:15px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  .hero{
+    flex-direction:column-reverse;
+    text-align:center;
+    gap:50px;
+  }
+
+  .hero-text h1{
+    font-size:52px;
+  }
+
+  nav ul{
+    display:none;
+  }
+
+  .hero-image img{
+    width:250px;
+    height:250px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<h1>Sabitha.</h1>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h3>Hello, I'm</h3>
+
+<h1>Sabitha <span>Sankar</span></h1>
+
+<p>
+Passionate Frontend Developer and BCA student focused on building
+modern responsive websites and learning new technologies.
+Skilled in HTML, CSS, SQL, Python basics and GitHub.
+</p>
+
+<div class="buttons">
+
+<a href="#projects" class="btn btn-primary">
+View Projects
+</a>
+
+<a href="resume.jpg"
+target="_blank"
+class="btn btn-outline">
+
+View Resume
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img src="profile.jpg" alt="Sabitha">
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="title">About Me</h2>
+
+<div class="glass about">
+
+<p>
+I am Sabitha Sankar, a motivated BCA student interested in frontend
+development and software technologies. I enjoy building creative
+responsive websites and continuously improving my skills.
+I am passionate about learning modern web technologies and
+creating user-friendly websites with clean design.
+</p>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<h2 class="title">Skills</h2>
+
+<div class="skills">
+
+<div class="glass skill-card">
+<h3>HTML (Intermediate)</h3>
+</div>
+
+<div class="glass skill-card">
+<h3>CSS (Intermediate)</h3>
+</div>
+
+<div class="glass skill-card">
+<h3>JavaScript (Basic)</h3>
+</div>
+
+<div class="glass skill-card">
+<h3>Python (Basic)</h3>
+</div>
+
+<div class="glass skill-card">
+<h3>SQL (Basic)</h3>
+</div>
+
+<div class="glass skill-card">
+<h3>Java (Basic)</h3>
+</div>
+
+<div class="glass skill-card">
+<h3>GitHub</h3>
+</div>
+
+<div class="glass skill-card">
+<h3>MS Excel</h3>
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<h2 class="title">Projects</h2>
+
+<div class="projects">
+
+<div class="glass project-card">
+
+<h3>Lost & Found Campus</h3>
+
+<p>
+A responsive web application designed to help students report
+and recover lost items within college campus easily and efficiently.
+</p>
+
+<a href="https://lostandfoundclgcampus.netlify.app"
+target="_blank"
+class="project-btn">
+
+View Project
+
+</a>
+
+</div>
+
+<div class="glass project-card">
+
+<h3>Smart Travel Planner</h3>
+
+<p>
+A modern travel planning website that helps users organize trips,
+explore destinations and manage travel schedules easily.
+</p>
+
+<a href="https://smarttravel-planner.netlify.app"
+target="_blank"
+class="project-btn">
+
+View Project
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2 class="title">Contact</h2>
+
+<div class="glass contact">
+
+<p>Email : sabithasankar872006@gmail.com</p>
+
+<p>Phone : 7604948660</p>
+
+<p>Location : Tamil Nadu, India</p>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 Sabitha Sankar | Portfolio
+
+</footer>
+
+</body>
+</html>
